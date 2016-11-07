@@ -1,0 +1,21 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+.main-box{
+  height: 600px;
+  width: 100%;
+  margin-top: 100px;
+  border-radius: 30px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #2ab27b;
+  margin-bottom: 200px;
+}
