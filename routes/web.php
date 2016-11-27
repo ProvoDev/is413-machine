@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', 'HomeController@index');
+Route::get('/azure', 'HomeController@azurerequest');
+Route::get('/phpinfo', function() {
+    return phpinfo();
 });
+
+Route::post('/', 'HomeController@azurerequest');

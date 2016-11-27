@@ -10,10 +10,10 @@
         <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body class="blue darken-4">
-
+    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <div class="navbar-fixed">
         <nav class="grey darken-2  white-text">
             <div class="nav-wrapper">
