@@ -13,7 +13,7 @@
             <div class="col m9">
 
                 <div class="col s12">
-                    <div class="main-box grey lighten-3 z-depth-4">
+                    <div class="main-box z-depth-4">
                         <form class="col s12">
                             <h3>Calculate</h3>
                             <div class="row">

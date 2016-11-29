@@ -20,33 +20,31 @@ class HomeController extends Controller
                   "Inputs": {
                     "input1": {
                       "ColumnNames": [
-                        "201",
-                        "303",
-                        "Is Male",
-                        "prereq",
-                        "BYU",
-                        "30 hr",
-                        "acc",
-                        "FIN",
-                        "Bus M",
-                        "hrs"
+                            "Is Male",
+                            "prereq",
+                            "BYU",
+                            "30 hr",
+                            "201",
+                            "303",
+                            "acc",
+                            "FIN",
+                            "Bus M",
+                            "hrs"
                       ],
                       "Values": [
                         [
-                          "1",
-                          "'.$request->input('201-grade').'",
-                          "'.$request->input('303-grade').'",
                           "'.$request->input('gender').'",
                           "'.$request->input('pre-gpa').'",
                           "'.$request->input('byu-gpa').'",
                           "'.$request->input('last-gpa').'",
+                          "'.$request->input('201-grade').'",
+                          "'.$request->input('303-grade').'",
                           "'.$request->input('acc-grade').'",
                           "'.$request->input('fin-grade').'",
                           "'.$request->input('busm-grade').'",
                           "'.$request->input('credits').'"
                         ],
                         [
-                          "0",
                           "0",
                           "0",
                           "0",
@@ -65,7 +63,7 @@ class HomeController extends Controller
                 }';
         //echo $data;
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://ussouthcentral.services.azureml.net/workspaces/5d4bc69e2b9e4a68baf75e6c477497cc/services/09e79fcaacc44159aec1a268e1ed7306/execute?api-version=2.0&format=swagger",
+            CURLOPT_URL => "https://ussouthcentral.services.azureml.net/workspaces/5d4bc69e2b9e4a68baf75e6c477497cc/services/09e79fcaacc44159aec1a268e1ed7306/execute?api-version=2.0&details=true",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -90,6 +88,7 @@ class HomeController extends Controller
             echo "cURL Error #:" . $err;
         }
 
+        //return $data;
         return $response;
     }
 }

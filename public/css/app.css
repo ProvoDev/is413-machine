@@ -5770,15 +5770,19 @@ button.close {
   height: 600px;
   width: 100%;
   margin-top: 100px;
-  border-radius: 30px;
   border-width: 10px;
   border-style: solid;
-  border-color: #2ab27b;
-  margin-bottom: 200px; }
+  border-color: #0d47a1;
+  background-color: #ffffff;
+  margin-bottom: 200px;
+  padding: 5px; }
 
 .main-heading {
   padding-top: 200px;
   margin-top: 100px;
   font-size: 40px; }
+
+body {
+  background-color: #ffffff; }
 
 /*# sourceMappingURL=app.css.map */
