@@ -16,16 +16,7 @@
     </head>
     <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    {{--<div class="navbar-fixed">--}}
-        {{--<nav class="grey darken-2  white-text">--}}
-            {{--<div class="nav-wrapper">--}}
-                {{--<a class="brand-logo">Wolfpack Software International</a>--}}
-                {{--<ul class="right hide-on-med-and-down">--}}
-                    {{--<li><a href="sass.html"></a></li>--}}
-                {{--</ul>--}}
-            {{--</div>--}}
-        {{--</nav>--}}
-    {{--</div>--}}
+
 
     @yield('body')
 

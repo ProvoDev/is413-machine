@@ -19,4 +19,6 @@ Route::get('/phpinfo', function() {
     return phpinfo();
 });
 
+Route::get('/data', 'HomeController@data');
+
 Route::post('/', 'HomeController@azurerequest');

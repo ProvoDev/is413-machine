@@ -60,7 +60,7 @@
                                 <h6>Personal Info</h6>
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">perm_identity</i>
-                                    <select name="gender">
+                                    <select required name="gender">
                                         <option value="" disabled selected>Select your gender:</option>
                                         <option value="1">Male</option>
                                         <option value="0">Female</option>
@@ -254,24 +254,35 @@
                 data: $('form').serialize(),
                 success: function(response) {
                     var raw = response;
+                    console.log(raw);
                     var data = JSON.parse(response);
-                    var labels = data.Results.output1.value.Values[0][1];
-                    labels = labels*100;
+                    var labels = data.Results.output1.value.Values[0][3];
+                    var ProbAdmit = data.Results.output1.value.Values[0][2];
+                    var ProbWait = data.Results.output1.value.Values[0][1];
+                    var ProbDeny = data.Results.output1.value.Values[0][0];
                     var probabilities = data.Results.output1.value.Values[1][1];
-                    var buy = '';
-                    console.log(probabilities);
-                    if(probabilities >= .5)
-                    {
-                        buy = 'not make it';
-                        console.log('no buy');
-                    }
-                    else {
-                        buy = 'make it';
-                        console.log('buy');
-                    }
+                    console.log('label: '+labels);
+                    console.log('Admit: '+ProbAdmit);
+                    console.log('Wait: '+ProbWait);
+                    console.log('Deny: '+ProbDeny);
                     console.log('Lables: ' + labels+' Probabilities: '+ probabilities);
+
+                    var labelPhrase = '';
+                    if(labels == 0)
+                    {
+                        labelPhrase = "Your chances of making the program aren't that good.";
+                    }
+                    else if (labels == 1)
+                    {
+                        labelPhrase = "You have a chance of making the program, possibly on the waitlist";
+                    }
+                    else if (labels == 2)
+                    {
+                        labelPhrase = "You have a good chance of making the program";
+                    }
+
                     $('#raw-json').html(raw);
-                    $('#result').html('<h3>You have a ' + labels + '% chance that you will '+buy+' into the program</h3><br/><a class="waves-effect waves-light btn blue darken-3" href="#prediction">Adjust your values</a>');
+                    $('#result').html('<h3>'+ labelPhrase +'</h3><br/><h5>You have a '+ ProbAdmit*100 +'% chance of being admited.</h5><h5>You have a '+ ProbWait*100 +'% chance of being waitlisted.</h5><h5>You have a '+ ProbDeny*100 +'% chance of being denied.</h5><br/><a class="waves-effect waves-light btn blue darken-3" href="/data">See More Data</a>');
 
 
                 },

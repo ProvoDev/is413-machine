@@ -13,6 +13,11 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function data()
+    {
+        return view('data');
+    }
+
     public function azurerequest(Request $request)
     {
         $curl = curl_init();
