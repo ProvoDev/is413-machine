@@ -282,7 +282,7 @@
                     }
 
                     $('#raw-json').html(raw);
-                    $('#result').html('<h3>'+ labelPhrase +'</h3><br/><h5>You have a '+ ProbAdmit*100 +'% chance of being admited.</h5><h5>You have a '+ ProbWait*100 +'% chance of being waitlisted.</h5><h5>You have a '+ ProbDeny*100 +'% chance of being denied.</h5><br/><a class="waves-effect waves-light btn blue darken-3" href="{{url(data)}}">See More Data</a>');
+                    $('#result').html('<h3>'+ labelPhrase +'</h3><br/><h5>You have a '+ ProbAdmit*100 +'% chance of being admited.</h5><h5>You have a '+ ProbWait*100 +'% chance of being waitlisted.</h5><h5>You have a '+ ProbDeny*100 +'% chance of being denied.</h5><br/><a class="waves-effect waves-light btn blue darken-3" href="{{url('/data')}}">See More Data</a>');
 
 
                 },
