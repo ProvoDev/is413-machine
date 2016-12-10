@@ -222,6 +222,17 @@
         </div>
 
     </section>
+
+    <section id="tableau1">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    Mitchell Hussey (mitchhussey@gmail.com)
+                    <script type='text/javascript' src='https://tableau.byu.edu/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 836px;'><object class='tableauViz' width='1004' height='836' style='display:none;'><param name='host_url' value='https%3A%2F%2Ftableau.byu.edu%2F' /> <param name='site_root' value='&#47;t&#47;MSMBCC' /><param name='name' value='StudentViewableRegionalOverview&#47;RegionOverview' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showShareOptions' value='true' /></object></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script>
 
         $(document).ready(function() {
