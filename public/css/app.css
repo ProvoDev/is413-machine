@@ -5862,4 +5862,14 @@ h6 {
 #prediction-btn {
   display: none; }
 
+.tableauPlaceholder {
+  margin: 0 auto; }
+
+#tab-title {
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
+  margin-top: 100px;
+  font-family: 'Bungee Inline', cursive; }
+
 /*# sourceMappingURL=app.css.map */

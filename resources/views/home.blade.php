@@ -223,11 +223,15 @@
 
     </section>
 
-    <section id="tableau1">
+    <section class="black" id="tableau1">
         <div class="container">
+            <h1 id="tab-title">Tableau Dashboards</h1>
             <div class="row">
                 <div class="col s12">
-                    Mitchell Hussey (mitchhussey@gmail.com)
+                    <script type='text/javascript' src='https://tableau.byu.edu/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1204px; height: 836px;'><object class='tableauViz' width='1204' height='836' style='display:none;'><param name='host_url' value='https%3A%2F%2Ftableau.byu.edu%2F' /> <param name='site_root' value='&#47;t&#47;MSMBCC' /><param name='name' value='ISAdmissionDashboard&#47;ISProgramAdmissionStatistics' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showShareOptions' value='true' /></object></div>                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
                     <script type='text/javascript' src='https://tableau.byu.edu/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 836px;'><object class='tableauViz' width='1004' height='836' style='display:none;'><param name='host_url' value='https%3A%2F%2Ftableau.byu.edu%2F' /> <param name='site_root' value='&#47;t&#47;MSMBCC' /><param name='name' value='StudentViewableRegionalOverview&#47;RegionOverview' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showShareOptions' value='true' /></object></div>
                 </div>
             </div>
@@ -293,7 +297,7 @@
                     }
 
                     $('#raw-json').html(raw);
-                    $('#result').html('<h3>'+ labelPhrase +'</h3><br/><h5>You have a '+ ProbAdmit*100 +'% chance of being admited.</h5><h5>You have a '+ ProbWait*100 +'% chance of being waitlisted.</h5><h5>You have a '+ ProbDeny*100 +'% chance of being denied.</h5><br/><a class="waves-effect waves-light btn blue darken-3" href="{{url('/data')}}">See More Data</a>');
+                    $('#result').html('<h3>'+ labelPhrase +'</h3><br/><h5>You have a '+ ProbAdmit*100 +'% chance of being admited.</h5><h5>You have a '+ ProbWait*100 +'% chance of being waitlisted.</h5><h5>You have a '+ ProbDeny*100 +'% chance of being denied.</h5><br/><a class="waves-effect waves-light btn blue darken-3" href="#tableau1">See More Data</a><br/><a class="waves-effect waves-light btn blue darken-3" href="#prediction">Change your data</a><br/>');
 
 
                 },
